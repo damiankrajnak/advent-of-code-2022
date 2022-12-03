@@ -11,7 +11,7 @@ const group = (arr, size) => {
     if (i % size === 0) {
       res.push([arr[i]]);
     } else {
-      res[res.length - 1].push(arr[i]);
+      res.at(-1).push(arr[i]);
     }
   }
   return res;
