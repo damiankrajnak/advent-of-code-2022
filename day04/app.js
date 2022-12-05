@@ -20,11 +20,10 @@ const overlap = (a1, a2, b1, b2) => {
   return 0;
 };
 
+const tuples = fs.readFileSync("input.txt").toString().split("\n");
+
 // PART 1
-const part1 = fs
-  .readFileSync("input.txt")
-  .toString()
-  .split("\n")
+const part1 = tuples
   .map((tuple) => {
     let [first, second] = tuple.split(",");
     let [firstA, firstB] = first.split("-");
@@ -38,10 +37,7 @@ const part1 = fs
   .reduce((a, b) => a + b);
 
 // PART 2
-const part2 = fs
-  .readFileSync("input.txt")
-  .toString()
-  .split("\n")
+const part2 = tuples
   .map((tuple) => {
     let [first, second] = tuple.split(",");
     let [firstA, firstB] = first.split("-");
