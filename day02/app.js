@@ -41,7 +41,7 @@ const part1 = fs
   .toString()
   .split("\n")
   .map((match) => scoreMapper[match.split(" ")[0]][match.split(" ")[1]])
-  .reduce((a, b) => a + b, 0);
+  .reduce((a, b) => a + b);
 
 const part2 = fs
   .readFileSync("input.txt")
@@ -53,6 +53,6 @@ const part2 = fs
         myTurnMapper[match.split(" ")[0]][match.split(" ")[1]]
       ]
   )
-  .reduce((a, b) => a + b, 0);
+  .reduce((a, b) => a + b);
 
 console.log(`PART1: ${part1}\nPART2: ${part2}`);

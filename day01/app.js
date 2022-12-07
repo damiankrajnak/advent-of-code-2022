@@ -8,8 +8,10 @@ const food = fs
     elf
       .split("\n")
       .map((food) => Number(food))
-      .reduce((partialSum, a) => partialSum + a, 0)
+      .reduce((a, b) => a + b)
   )
   .sort((a, b) => b - a);
 
-console.log(`PART1: ${food[0]}\nPART2: ${food[0] + food[1] + food[2]}`);
+console.log(
+  `PART1: ${food[0]}\nPART2: ${food.slice(0, 3).reduce((a, b) => a + b)}`
+);
